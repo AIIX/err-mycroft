@@ -1,4 +1,4 @@
-## Mycroft plugin for errbot
+## Mycroft plugin for errbot [![Build Status](https://travis-ci.org/btotharye/err-mycroft.svg?branch=master)](https://travis-ci.org/btotharye/err-mycroft)
 
 ### About
 [Errbot](http://errbot.io) is a python chatbot, this plugin answers questions about Mycroft AI and will eventually interact with a mycroft instance.
