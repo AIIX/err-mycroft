@@ -47,5 +47,19 @@ class Mycroft(BotPlugin):
 
     @botcmd(split_args_with=None)
     def about_me(self, mess, args):
-        return "I am a bot to assist in Mycroft AI related questions and" \
+        return "I am a bot to assist in Mycroft AI related questions and " \
                "issues."
+
+    @botcmd()
+    def mycroft_help(self, mess, args):
+        output = "I am here to help with topics related to\n " \
+                 "What is mycroft\n How do I install mycroft\n " \
+                 "Where is the mycroft documentation, and anything " \
+                 "else about mycroft."
+
+    @re_botcmd(pattern=r"install.*picroft|picroft.*install.*",
+               prefixed=False, flags=re.IGNORECASE)
+    def install_picroft(self, mess, args):
+        output = "The install guide for the picroft project can be found here, " \
+                 "https://github.com/MycroftAI/enclosure-picroft/wiki" \
+                 "/Getting-Started-Guide."
