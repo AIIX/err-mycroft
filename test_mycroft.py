@@ -77,3 +77,10 @@ class TestMycroftBot(object):
         output = "The current list of mycroft skills can be found here, " \
                  "https://github.com/MycroftAI/mycroft-skills"
         assert output in testbot.pop_message()
+
+    def test_wake_word(self, testbot):
+        testbot.push_message('how do I change the wake word')
+        output = "You can adjust the wake word and sensitivity of mycroft " \
+                 "by using the docs here, " \
+                 "https://docs.mycroft.ai/installing.and.running/faq"
+        assert output in testbot.pop_message()

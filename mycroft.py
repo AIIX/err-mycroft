@@ -101,3 +101,11 @@ class Mycroft(BotPlugin):
                  "https://github.com/MycroftAI/mycroft-skills"
         return output
 
+    @re_botcmd(pattern=r"wake.*word|wake.*word.*",
+               prefixed=False, flags=re.IGNORECASE)
+    def wake_word(self, mess, args):
+        """A command that links you how to change the wake word"""
+        output = "You can adjust the wake word and sensitivity of mycroft " \
+                 "by using the docs here, " \
+                 "https://docs.mycroft.ai/installing.and.running/faq"
+        return output
