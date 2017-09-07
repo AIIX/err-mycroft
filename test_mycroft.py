@@ -68,6 +68,12 @@ class TestMycroftBot(object):
 
     def test_mycroft_skills(self, testbot):
         testbot.push_message('where is the skills list')
-        output = "The current list of mycroft skills can be found here," \
+        output = "The current list of mycroft skills can be found here, " \
+                 "https://github.com/MycroftAI/mycroft-skills"
+        assert output in testbot.pop_message()
+
+    def test_skills_available(self, testbot):
+        testbot.push_message('what skills are available')
+        output = "The current list of mycroft skills can be found here, " \
                  "https://github.com/MycroftAI/mycroft-skills"
         assert output in testbot.pop_message()

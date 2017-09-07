@@ -89,7 +89,15 @@ class Mycroft(BotPlugin):
                prefixed=False, flags=re.IGNORECASE)
     def mycroft_skills(self, mess, args):
         """A command that links you the skills repo"""
-        output = "The current list of mycroft skills can be found here,"\
+        output = "The current list of mycroft skills can be found here, "\
+                 "https://github.com/MycroftAI/mycroft-skills"
+        return output
+
+    @re_botcmd(pattern=r"skill.*available|available.*skill.*",
+               prefixed=False, flags=re.IGNORECASE)
+    def available_skills(self, mess, args):
+        """A command that links you the skills repo"""
+        output = "The current list of mycroft skills can be found here, " \
                  "https://github.com/MycroftAI/mycroft-skills"
         return output
 
