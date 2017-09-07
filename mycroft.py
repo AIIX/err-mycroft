@@ -20,8 +20,8 @@ class Mycroft(BotPlugin):
     @re_botcmd(pattern=r"install.*mycroft|mycroft.*install.*",
                prefixed=False, flags=re.IGNORECASE)
     def install_mycroft(self, message, match):
-
         """A command which gives you the location to the mycroft install"""
+
         output = "The information for installing mycroft can be found here, " \
                  "https://docs.mycroft.ai/installing.and.running"
 
@@ -30,7 +30,6 @@ class Mycroft(BotPlugin):
     @re_botcmd(pattern=r"what.i.*mycroft|mycroft.*what.*",
                prefixed=False, flags=re.IGNORECASE)
     def what_mycroft(self, message, match):
-
         """A command which gives you information about mycroft"""
         output = "Mycroft Core is the primary module that makes up the " \
                  "Mycroft Artificial Intelligence platform.  Mycroft makes " \
