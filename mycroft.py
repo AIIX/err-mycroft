@@ -61,7 +61,7 @@ class Mycroft(BotPlugin):
     @re_botcmd(pattern=r"install.*picroft|picroft.*install.*",
                prefixed=False, flags=re.IGNORECASE)
     def install_picroft(self, mess, args):
-        output = "The install guide for the picroft project can be found here, " \
-                 "https://github.com/MycroftAI/enclosure-picroft/wiki" \
+        output = "The install guide for the picroft project can be found " \
+                 "here, https://github.com/MycroftAI/enclosure-picroft/wiki" \
                  "/Getting-Started-Guide."
         return output
