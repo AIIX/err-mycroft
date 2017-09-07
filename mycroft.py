@@ -47,4 +47,5 @@ class Mycroft(BotPlugin):
 
     @botcmd(split_args_with=None)
     def about_me(self, mess, args):
-        return "I am a bot to assist in Mycroft AI related questions and issues."
+        return "I am a bot to assist in Mycroft AI related questions and" \
+               "issues."
