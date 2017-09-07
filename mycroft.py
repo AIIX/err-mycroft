@@ -1,6 +1,7 @@
 from errbot import BotPlugin, botcmd, arg_botcmd, webhook, re_botcmd
 import re
 
+
 class Mycroft(BotPlugin):
     """
     ask questions about mycroft and interact with a mycroft instance
