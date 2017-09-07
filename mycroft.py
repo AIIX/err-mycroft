@@ -56,6 +56,7 @@ class Mycroft(BotPlugin):
                  "What is mycroft\n How do I install mycroft\n " \
                  "Where is the mycroft documentation, and anything " \
                  "else about mycroft."
+        return output
 
     @re_botcmd(pattern=r"install.*picroft|picroft.*install.*",
                prefixed=False, flags=re.IGNORECASE)
@@ -63,3 +64,4 @@ class Mycroft(BotPlugin):
         output = "The install guide for the picroft project can be found here, " \
                  "https://github.com/MycroftAI/enclosure-picroft/wiki" \
                  "/Getting-Started-Guide."
+        return output
