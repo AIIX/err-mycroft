@@ -40,6 +40,6 @@ class Mycroft(BotPlugin):
                  "of tasks. Mycroft is often used to refer to the hardware product " \
                  "produced by Mycroft AI, Inc. - so to avoid confusion, the software " \
                  "stack is often referred to as \"Mycroft Core\", more info can be " \
-                 "found here, \"https://docs.mycroft.ai/"
+                 "found here, https://docs.mycroft.ai"
 
         return output
