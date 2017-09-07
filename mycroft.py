@@ -24,7 +24,7 @@ class Mycroft(BotPlugin):
     @re_botcmd(pattern=r"what.i.*mycroft|mycroft.*what.*",
                prefixed=False, flags=re.IGNORECASE)
     def what_mycroft(self, message, match):
-        """A command which gives you the location to the mycroft install"""
+        """A command which gives you information about mycroft"""
         return "Mycroft Core is the primary module that makes up the \
         Mycroft Artificial Intelligence platform. Mycroft makes use of \
         the Adapt Intent Parser, Speech-to-Text software, and Text-to-Speech.\
