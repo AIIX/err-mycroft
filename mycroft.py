@@ -85,3 +85,11 @@ class Mycroft(BotPlugin):
                  "https://rebrand.ly/Picroft-0_8"
         return output
 
+    @re_botcmd(pattern=r"skill.*list|list.*skill.*",
+               prefixed=False, flags=re.IGNORECASE)
+    def mycroft_skills(self, mess, args):
+        """A command that links you the skills repo"""
+        output = "The current list of mycroft skills can be found here,"\
+                 "https://github.com/MycroftAI/mycroft-skills"
+        return output
+

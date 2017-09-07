@@ -65,3 +65,9 @@ class TestMycroftBot(object):
         output = "The image for the picroft project can be found here, "\
                  "https://rebrand.ly/Picroft-0_8"
         assert output in testbot.pop_message()
+
+    def test_mycroft_skills(self, testbot):
+        testbot.push_message('where is the skills list')
+        output = "The current list of mycroft skills can be found here," \
+                 "https://github.com/MycroftAI/mycroft-skills"
+        assert output in testbot.pop_message()
