@@ -9,7 +9,7 @@ install:
  - pip install -r test-requirements.txt
 # command to run tests
 script:
- - pep8 err-mycroft test
+ - pep8 *.py test
  - nose2 -t ./ -s test/unittests --with-coverage --config=test/unittests/unittest.cfg
 env:
  - IS_TRAVIS=true
