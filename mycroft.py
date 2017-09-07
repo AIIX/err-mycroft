@@ -32,5 +32,5 @@ class Mycroft(BotPlugin):
         and turn it into a smart personal assistant, able to perform a variety\
         of tasks. Mycroft is often used to refer to the hardware product \
         produced by Mycroft AI, Inc. - so to avoid confusion, the software \
-        stack is often referred to as \"Mycroft Core\", more info can be found \
-        here, \"https://docs.mycroft.ai/"
+        stack is often referred to as \"Mycroft Core\", more info can be \
+        found here, \"https://docs.mycroft.ai/"
