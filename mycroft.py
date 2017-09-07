@@ -44,3 +44,7 @@ class Mycroft(BotPlugin):
                  "found here, https://docs.mycroft.ai"
 
         return output
+
+    @botcmd()
+    def about_me(self):
+        return "I am a bot to assist in Mycroft AI related questions and issues."
