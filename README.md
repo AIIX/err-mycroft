@@ -6,7 +6,7 @@
 ### Installation
 From errbot issue command: `!repos install https://github.com/btotharye/err-mycroft.git`
 
-To see the help menu simply type !help mycroft
+To see the help menu simply type !help mycroft or !mycroft help will give you more specifics as well.
 
 ### Question Examples
 The bot doesn't need a mention so you can ask things in the channel like `where is the mycroft documentation` or `how do I install mycroft`, etc to get responses from your bot.
