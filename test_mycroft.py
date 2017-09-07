@@ -53,3 +53,15 @@ class TestMycroftBot(object):
                  "here, https://github.com/MycroftAI/enclosure-picroft/wiki" \
                  "/Getting-Started-Guide."
         assert output in testbot.pop_message()
+
+    def test_picroft_docs(self, testbot):
+        testbot.push_message('where are the picroft docs')
+        output = "The documentation for the picroft project can be found " \
+                 "here, https://github.com/MycroftAI/enclosure-picroft/wiki."
+        assert output in testbot.pop_message()
+
+    def test_picroft_image(self, testbot):
+        testbot.push_message('where is the picroft image')
+        output = "The image for the picroft project can be found here, "\
+                 "https://rebrand.ly/Picroft-0_8"
+        assert output in testbot.pop_message()

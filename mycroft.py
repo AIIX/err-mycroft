@@ -47,11 +47,13 @@ class Mycroft(BotPlugin):
 
     @botcmd(split_args_with=None)
     def about_me(self, mess, args):
+        """A command that gives information about itself"""
         return "I am a bot to assist in Mycroft AI related questions and " \
                "issues."
 
     @botcmd()
     def mycroft_help(self, mess, args):
+        """A command which gives you help info about the mycroft bot"""
         output = "I am here to help with topics related to\n " \
                  "What is mycroft\n How do I install mycroft\n " \
                  "Where is the mycroft documentation, and anything " \
@@ -61,7 +63,25 @@ class Mycroft(BotPlugin):
     @re_botcmd(pattern=r"install.*picroft|picroft.*install.*",
                prefixed=False, flags=re.IGNORECASE)
     def install_picroft(self, mess, args):
+        """A command that gives information about installing picroft"""
         output = "The install guide for the picroft project can be found " \
                  "here, https://github.com/MycroftAI/enclosure-picroft/wiki" \
                  "/Getting-Started-Guide."
         return output
+
+    @re_botcmd(pattern=r"doc.*picroft|picroft.*doc.*",
+               prefixed=False, flags=re.IGNORECASE)
+    def picroft_docs(self, mess, args):
+        """A command that links you to the picroft documentation"""
+        output = "The documentation for the picroft project can be found " \
+                 "here, https://github.com/MycroftAI/enclosure-picroft/wiki."
+        return output
+
+    @re_botcmd(pattern=r"image.*picroft|picroft.*image.*",
+               prefixed=False, flags=re.IGNORECASE)
+    def picroft_image(self, mess, args):
+        """A command that links you to the picroft image"""
+        output = "The image for the picroft project can be found here, " \
+                 "https://rebrand.ly/Picroft-0_8"
+        return output
+
