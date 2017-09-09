@@ -109,7 +109,7 @@ class Mycroft(BotPlugin):
                  "by using the docs here, " \
                  "https://docs.mycroft.ai/installing.and.running/faq"
         return output
-    
+
     @re_botcmd(pattern=r"hey|hi|hello",
                prefixed=False, flags=re.IGNORECASE)
     def hello(self, message, match):
