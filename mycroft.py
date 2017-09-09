@@ -112,9 +112,8 @@ class Mycroft(BotPlugin):
     
     @re_botcmd(pattern=r"hey|hi|hello",
                prefixed=False, flags=re.IGNORECASE)
-    def mycroft_docs(self, message, match):
+    def hello(self, message, match):
         """A command which responds to hello"""
-
         output = "Hello I can answer things related to Mycroft, you can " \
                  "ask me things like where are the mycroft docs, etc."
 
