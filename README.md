@@ -1,5 +1,8 @@
 ## Mycroft plugin for errbot [![Build Status](https://travis-ci.org/btotharye/err-mycroft.svg?branch=master)](https://travis-ci.org/btotharye/err-mycroft) [![Coverage Status](https://coveralls.io/repos/github/btotharye/err-mycroft/badge.svg?branch=master)](https://coveralls.io/github/btotharye/err-mycroft?branch=master)
 
+## Live Demo
+You can access this bot on Telegram here: https://web.telegram.org/#/im?p=@MycroftHelpBot
+
 ### About
 [Errbot](http://errbot.io) is a python chatbot, this plugin answers questions about Mycroft AI and will eventually interact with a mycroft instance.
 
