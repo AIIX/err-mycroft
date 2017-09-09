@@ -115,6 +115,7 @@ class Mycroft(BotPlugin):
     def hello(self, message, match):
         """A command which responds to hello"""
         output = "Hello I can answer things related to Mycroft, you can " \
-                 "ask me things like where are the mycroft docs, etc."
+                 "ask me things like where are the mycroft docs, etc." \
+                 "You can also ask !help or /help to get more info."
 
         return output
