@@ -1,17 +1,15 @@
 language: python
 python:
-  - "3.4"
-  - "3.5"
-  - "3.6"
-
+- '3.4'
+- '3.5'
+- '3.6'
 install:
-  - pip install -q err pytest pytest-pep8 --use-wheel
-  - pip install -q coverage coveralls --use-wheel
-
-# command to run tests
+- pip install -q err pytest pytest-pep8 --use-wheel
+- pip install -q coverage coveralls --use-wheel
 script:
- - pep8 --statistics --show-source mycroft.py
- - coverage run --source mycroft -m py.test
-
-after_success:
-  coveralls
+- pep8 --statistics --show-source mycroft.py
+- coverage run --source mycroft -m py.test
+after_success: coveralls
+notifications:
+  slack:
+    secure: ZqnBZUUx3EYph7dvnTzj9WRFD+o0QfbqqcyI67bWPo7LSrV0xpPrygZy/gLRWQOTpwqKODuKrNxX3Xou/6KixPrD37i+GeztyL46HxDNvC1VLUbEKuVA6mdqjLuMDTweeXY8nupuF109dwR6v7Zz0L4rMoHRvHgOwvp5TqHrgDsQjVgIkjqLAzafpZgEH0ChMJsB8rsYwQRTfOmCv6Q6VsaYDU/xX8eD/mXjlSWkZDFJsTgLVrL+KwW5/Mi9G93jI9wpTHieTQjULgSyMxcf40KxrH1VrtsxzYUD0jQaVJ/bO1kMxx0NBx6CXK385hT+hLqmScMuVaryh6twGUFRati/pe45rhs53vCGQUpBSlwar/cO5Y25IrvKEVt2BXVXVOP1oVQiLAoTovXirhwFeVubnm/j5TIr49YgDSixyNXXpJD/q/az0xOQrT9NN1yVoRQnF6cP58nWO3+7dnqIcBweIO6lOBOsk4nimq+DSZPjf1eUpD4kutKjiLsWGw4udR2U+/26pue1yVx2+3Oxp7ZBxCx8Jc0kd4klqhRPPwjwtORR/+5cvUb8aEcG4x8Ao7GkENJZmDziMoYJvrLJ7m2oWIdQ3ysITUjfacQwYS3Tqa2+RxgBXkj/TpRWu6gAcmhf/wM8V1GkPt3ISKEw9uFJmGY5ejd7UqKX7QpAHkA=
