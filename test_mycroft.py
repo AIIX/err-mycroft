@@ -84,3 +84,9 @@ class TestMycroftBot(object):
                  "by using the docs here, " \
                  "https://docs.mycroft.ai/installing.and.running/faq"
         assert output in testbot.pop_message()
+        
+    def test_hello(self, testbot):
+        testbot.push_message('hello')
+        output = "Hello I can answer things related to Mycroft, you can " \
+                 "ask me things like where are the mycroft docs, etc."
+        assert output in testbot.pop_message()
