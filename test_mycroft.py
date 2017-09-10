@@ -86,7 +86,7 @@ class TestMycroftBot(object):
         assert output in testbot.pop_message()
         
     def test_hello(self, testbot):
-        testbot.push_message('hello')
+        testbot.push_message('!hello')
         output = "Hello I can answer things related to Mycroft, you can " \
                  "ask me things like where are the mycroft docs, etc." \
                  "You can also ask !help or /help to get more info."
