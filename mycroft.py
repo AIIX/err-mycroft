@@ -7,8 +7,7 @@ class Mycroft(BotPlugin):
     ask questions about mycroft and interact with a mycroft instance
     """
 
-    @re_botcmd(pattern=r"doc.*mycroft|mycroft.*doc.*",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def mycroft_docs(self, message, match):
         """A command which gives you the location to the mycroft docs"""
 
@@ -17,8 +16,7 @@ class Mycroft(BotPlugin):
 
         return output
 
-    @re_botcmd(pattern=r"install.*mycroft|mycroft.*install.*",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def install_mycroft(self, message, match):
         """A command which gives you the location to the mycroft install"""
 
@@ -27,8 +25,7 @@ class Mycroft(BotPlugin):
 
         return output
 
-    @re_botcmd(pattern=r"what.i.*mycroft|mycroft.*what.*",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def what_mycroft(self, message, match):
         """A command which gives you information about mycroft"""
         output = "Mycroft Core is the primary module that makes up the " \
@@ -45,13 +42,13 @@ class Mycroft(BotPlugin):
 
         return output
 
-    @botcmd(split_args_with=None)
+    @botcmd
     def about_me(self, mess, args):
         """A command that gives information about itself"""
         return "I am a bot to assist in Mycroft AI related questions and " \
                "issues."
 
-    @botcmd()
+    @botcmd
     def mycroft_help(self, mess, args):
         """A command which gives you help info about the mycroft bot"""
         output = "I am here to help with topics related to\n " \
@@ -60,8 +57,7 @@ class Mycroft(BotPlugin):
                  "else about mycroft."
         return output
 
-    @re_botcmd(pattern=r"install.*picroft|picroft.*install.*",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def install_picroft(self, mess, args):
         """A command that gives information about installing picroft"""
         output = "The install guide for the picroft project can be found " \
@@ -69,40 +65,35 @@ class Mycroft(BotPlugin):
                  "/Getting-Started-Guide."
         return output
 
-    @re_botcmd(pattern=r"doc.*picroft|picroft.*doc.*",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def picroft_docs(self, mess, args):
         """A command that links you to the picroft documentation"""
         output = "The documentation for the picroft project can be found " \
                  "here, https://github.com/MycroftAI/enclosure-picroft/wiki."
         return output
 
-    @re_botcmd(pattern=r"image.*picroft|picroft.*image.*",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def picroft_image(self, mess, args):
         """A command that links you to the picroft image"""
         output = "The image for the picroft project can be found here, " \
                  "https://rebrand.ly/Picroft-0_8"
         return output
 
-    @re_botcmd(pattern=r"skill.*list|list.*skill.*",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def mycroft_skills(self, mess, args):
         """A command that links you the skills repo"""
         output = "The current list of mycroft skills can be found here, "\
                  "https://github.com/MycroftAI/mycroft-skills"
         return output
 
-    @re_botcmd(pattern=r"skill.*available|available.*skill.*",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def available_skills(self, mess, args):
         """A command that links you the skills repo"""
         output = "The current list of mycroft skills can be found here, " \
                  "https://github.com/MycroftAI/mycroft-skills"
         return output
 
-    @re_botcmd(pattern=r"wake.*word|wake.*word.*",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def wake_word(self, mess, args):
         """A command that links you how to change the wake word"""
         output = "You can adjust the wake word and sensitivity of mycroft " \
@@ -110,8 +101,7 @@ class Mycroft(BotPlugin):
                  "https://docs.mycroft.ai/installing.and.running/faq"
         return output
 
-    @re_botcmd(pattern=r"hey|hi|hello",
-               prefixed=False, flags=re.IGNORECASE)
+    @botcmd
     def hello(self, message, match):
         """A command which responds to hello"""
         output = "Hello I can answer things related to Mycroft, you can " \

@@ -7,19 +7,19 @@ class TestMycroftBot(object):
     extra_plugin_dir = '.'
 
     def test_mycroft_docs(self, testbot):
-        testbot.push_message('where are the mycroft docs')
+        testbot.push_message('!mycroft_docs')
         assert 'The mycroft documentation can be found at ' \
                'https://docs.mycroft.ai' in testbot.pop_message()
 
 
     def test_install_mycroft(self, testbot):
-        testbot.push_message('where can I install mycroft')
+        testbot.push_message('!install_mycroft')
         assert "The information for installing mycroft " \
                "can be found here, https://docs.mycroft.ai/" \
                "installing.and.running" in testbot.pop_message()
 
     def test_what_mycroft(self, testbot):
-        testbot.push_message('what is mycroft')
+        testbot.push_message('!what_mycroft')
         output = "Mycroft Core is the primary module that makes up the " \
                  "Mycroft Artificial Intelligence platform.  Mycroft makes " \
                  "use of the Adapt Intent Parser, Speech-to-Text software, " \
@@ -48,45 +48,45 @@ class TestMycroftBot(object):
         assert output in testbot.pop_message()
 
     def test_install_picroft(self, testbot):
-        testbot.push_message('how do I install picroft')
+        testbot.push_message('!install_picroft')
         output = "The install guide for the picroft project can be found " \
                  "here, https://github.com/MycroftAI/enclosure-picroft/wiki" \
                  "/Getting-Started-Guide."
         assert output in testbot.pop_message()
 
     def test_picroft_docs(self, testbot):
-        testbot.push_message('where are the picroft docs')
+        testbot.push_message('!picroft_docs')
         output = "The documentation for the picroft project can be found " \
                  "here, https://github.com/MycroftAI/enclosure-picroft/wiki."
         assert output in testbot.pop_message()
 
     def test_picroft_image(self, testbot):
-        testbot.push_message('where is the picroft image')
+        testbot.push_message('!picroft_image')
         output = "The image for the picroft project can be found here, "\
                  "https://rebrand.ly/Picroft-0_8"
         assert output in testbot.pop_message()
 
     def test_mycroft_skills(self, testbot):
-        testbot.push_message('where is the skills list')
+        testbot.push_message('!mycroft_skills')
         output = "The current list of mycroft skills can be found here, " \
                  "https://github.com/MycroftAI/mycroft-skills"
         assert output in testbot.pop_message()
 
     def test_skills_available(self, testbot):
-        testbot.push_message('what skills are available')
+        testbot.push_message('!available_skills')
         output = "The current list of mycroft skills can be found here, " \
                  "https://github.com/MycroftAI/mycroft-skills"
         assert output in testbot.pop_message()
 
     def test_wake_word(self, testbot):
-        testbot.push_message('how do I change the wake word')
+        testbot.push_message('!wake word')
         output = "You can adjust the wake word and sensitivity of mycroft " \
                  "by using the docs here, " \
                  "https://docs.mycroft.ai/installing.and.running/faq"
         assert output in testbot.pop_message()
         
     def test_hello(self, testbot):
-        testbot.push_message('hello')
+        testbot.push_message('!hello')
         output = "Hello I can answer things related to Mycroft, you can " \
                  "ask me things like where are the mycroft docs, etc." \
                  "You can also ask !help or /help to get more info."
