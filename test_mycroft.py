@@ -39,14 +39,6 @@ class TestMycroftBot(object):
         assert 'I am a bot to assist in Mycroft AI related questions and ' \
                'issues.' in testbot.pop_message()
 
-    def test_mycroft_help(self, testbot):
-        testbot.push_message('!mycroft_help')
-        output = "I am here to help with topics related to\n " \
-                 "What is mycroft\n How do I install mycroft\n " \
-                 "Where is the mycroft documentation, and anything " \
-                 "else about mycroft."
-        assert output in testbot.pop_message()
-
     def test_install_picroft(self, testbot):
         testbot.push_message('!install_picroft')
         output = "The install guide for the picroft project can be found " \
