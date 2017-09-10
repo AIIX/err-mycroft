@@ -109,3 +109,13 @@ class Mycroft(BotPlugin):
                  "by using the docs here, " \
                  "https://docs.mycroft.ai/installing.and.running/faq"
         return output
+
+    @re_botcmd(pattern=r"hey|hi|hello",
+               prefixed=False, flags=re.IGNORECASE)
+    def hello(self, message, match):
+        """A command which responds to hello"""
+        output = "Hello I can answer things related to Mycroft, you can " \
+                 "ask me things like where are the mycroft docs, etc." \
+                 "You can also ask !help or /help to get more info."
+
+        return output
