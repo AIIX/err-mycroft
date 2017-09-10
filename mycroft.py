@@ -49,15 +49,6 @@ class Mycroft(BotPlugin):
                "issues."
 
     @botcmd
-    def mycroft_help(self, mess, args):
-        """A command which gives you help info about the mycroft bot"""
-        output = "I am here to help with topics related to\n " \
-                 "What is mycroft\n How do I install mycroft\n " \
-                 "Where is the mycroft documentation, and anything " \
-                 "else about mycroft."
-        return output
-
-    @botcmd
     def install_picroft(self, mess, args):
         """A command that gives information about installing picroft"""
         output = "The install guide for the picroft project can be found " \
