@@ -63,11 +63,11 @@ class TestMycroftBot(object):
     def test_troubleshoot_plasmoid(self, testbot):
         testbot.push_message('!troubleshoot_plasmoid')
         output = "Steps to troubleshoot your plasmoid install" \
-                 "* Check if mycroft-core is installed correctly" \
-                 "* Open plasmoid settings and check your mycroft path" \
-                 "* Run plasmashell in debug mode report error messages" \
-                 "* Submit your issue/bug report on the #desktop channel, or" \
-                 "* Create a bug report at https://bugs.kde.org/" \
+                 "1: Check if mycroft is installed correctly" \
+                 "2: Open plasmoid settings and check your mycroft path" \
+                 "3: Run plasmashell in debug mode report error messages" \
+                 "4: Submit your issue's on the #desktop channel, or" \
+                 "5: Create a bug report at https://bugs.kde.org" \
                  "/describecomponents.cgi?product=plasma-mycroft"
         assert output in testbot.pop_message()
 
