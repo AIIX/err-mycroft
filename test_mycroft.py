@@ -46,7 +46,7 @@ class TestMycroftBot(object):
         assert output in testbot.pop_message()
 
     def test_install_plasmoid(self, testbot):
-        testbot.push_message('!install_kde_plasmoid')
+        testbot.push_message('!install_plasmoid')
         output = "Follow the plasmoid install guide" \
                  "at, https://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
                  "If you are running an Ubuntu or Fedora based distribution" \
