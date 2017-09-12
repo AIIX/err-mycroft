@@ -11,7 +11,6 @@ class TestMycroftBot(object):
         assert 'The mycroft documentation can be found at ' \
                'https://docs.mycroft.ai' in testbot.pop_message()
 
-
     def test_install_mycroft(self, testbot):
         testbot.push_message('!install_mycroft')
         assert "The information for installing mycroft " \
@@ -45,31 +44,33 @@ class TestMycroftBot(object):
                  "here, https://github.com/MycroftAI/enclosure-picroft/wiki" \
                  "/Getting-Started-Guide."
         assert output in testbot.pop_message()
-        
+
     def test_install_plasmoid(self, testbot):
         testbot.push_message('!install_kde_plasmoid')
-        output = "The install guide for the KDE plasmoid project can be found " \
-                 "here, https://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
-                 "If you are running a Debian/Ubuntu or Fedora based distribution" \
-                 "You can find the installation scripts here, https://github.com/MycroftAI/installers"    
+        output = "Follow the plasmoid install guide" \
+                 "at, https://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
+                 "If you are running an Ubuntu or Fedora based distribution" \
+                 "You can find the installation scripts" \
+                 "here, https://github.com/MycroftAI/installers"
         assert output in testbot.pop_message()
-        
+
     def test_install_qtapp(self, testbot):
         testbot.push_message('!install_qt_application')
-        output = "The appimage for the qt standalone application project can be found " \
-                 "here, https://github.com/AIIX/Mycroft-Ai-QtApplication/releases"    
+        output = "Appimage for the standalone Qtapplication is available at" \
+                 "https://github.com/AIIX/Mycroft-Ai-QtApplication/releases"
         assert output in testbot.pop_message()
-        
+
     def test_troubleshoot_plasmoid(self, testbot):
         testbot.push_message('!troubleshoot_plasmoid')
         output = "Steps to troubleshoot your plasmoid install" \
                  "* Check if mycroft-core is installed correctly" \
                  "* Open plasmoid settings and check your mycroft path" \
-                 "* Run plasmashell in debug mode and check for error messages" \
+                 "* Run plasmashell in debug mode report error messages" \
                  "* Submit your issue/bug report on the #desktop channel, or" \
-                 "* Create a bug report here, https://bugs.kde.org/describecomponents.cgi?product=plasma-mycroft"
+                 "* Create a bug report at https://bugs.kde.org/" \
+                 "/describecomponents.cgi?product=plasma-mycroft"
         assert output in testbot.pop_message()
-        
+
     def test_picroft_docs(self, testbot):
         testbot.push_message('!picroft_docs')
         output = "The documentation for the picroft project can be found " \
@@ -93,12 +94,12 @@ class TestMycroftBot(object):
         output = "The current list of mycroft skills can be found here, " \
                  "https://github.com/MycroftAI/mycroft-skills"
         assert output in testbot.pop_message()
-        
+
     def test_desktop_clients(self, testbot):
         testbot.push_message('!available_desktop_clients')
         output = "The current list of mycroft desktop clients, " \
-                 "KDE Plasma Desktop: https://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
-                 "Other Desktop Environments: https://github.com/AIIX/Mycroft-Ai-QtApplication/releases"    
+                 "KDE: http://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
+                 "Others: https://github.com/AIIX/Mycroft-AI-QtApplication"
         assert output in testbot.pop_message()
 
     def test_wake_word(self, testbot):
@@ -107,7 +108,7 @@ class TestMycroftBot(object):
                  "by using the docs here, " \
                  "https://docs.mycroft.ai/installing.and.running/faq"
         assert output in testbot.pop_message()
-        
+
     def test_hello(self, testbot):
         testbot.push_message('!hello')
         output = "Hello I can answer things related to Mycroft, you can " \

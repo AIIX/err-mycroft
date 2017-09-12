@@ -3,6 +3,7 @@ import re
 
 
 class Mycroft(BotPlugin):
+
     """
     ask questions about mycroft and interact with a mycroft instance
     """
@@ -55,32 +56,34 @@ class Mycroft(BotPlugin):
                  "here, https://github.com/MycroftAI/enclosure-picroft/wiki" \
                  "/Getting-Started-Guide."
         return output
-    
+
     @botcmd
     def install_plasmoid(self, mess, args):
-        """A command that gives information about installing the KDE Plasmoid"""
-        output = "The install guide for the KDE plasmoid project can be found " \
-                 "here, https://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
-                 "If you are running a Debian/Ubuntu or Fedora based distribution" \
-                 "You can find the installation scripts here, https://github.com/MycroftAI/installers"
+        """A command that gives information about installing KDE Plasmoid"""
+        output = "Follow the plasmoid install guide" \
+                 "at, https://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
+                 "If you are running an Ubuntu or Fedora based distribution" \
+                 "You can find the installation scripts" \
+                 "here, https://github.com/MycroftAI/installers"
         return output
-    
+
     @botcmd
     def install_qtapp(self, mess, args):
-        """A command that gives information about installing the QT Application"""
-        output = "The appimage for the qt standalone application project can be found " \
-                 "here, https://github.com/AIIX/Mycroft-Ai-QtApplication/releases"
+        """A command that gives info about installing the QTApplication"""
+        output = "Appimage for the standalone Qtapplication is available at" \
+                 "https://github.com/AIIX/Mycroft-Ai-QtApplication/releases"
         return output
-    
+
     @botcmd
     def install_qtapp(self, mess, args):
-        """A command that gives troublehooting information about the KDE Plasmoid"""
+        """A command that gives troublehooting info for the KDE Plasmoid"""
         output = "Steps to troubleshoot your plasmoid install" \
                  "* Check if mycroft-core is installed correctly" \
                  "* Open plasmoid settings and check your mycroft path" \
-                 "* Run plasmashell in debug mode and check for error messages" \
+                 "* Run plasmashell in debug mode report error messages" \
                  "* Submit your issue/bug report on the #desktop channel, or" \
-                 "* Create a bug report here, https://bugs.kde.org/describecomponents.cgi?product=plasma-mycroft"
+                 "* Create a bug report at https://bugs.kde.org/" \
+                 "/describecomponents.cgi?product=plasma-mycroft"
         return output
 
     @botcmd
@@ -110,13 +113,13 @@ class Mycroft(BotPlugin):
         output = "The current list of mycroft skills can be found here, " \
                  "https://github.com/MycroftAI/mycroft-skills"
         return output
-    
+
     @botcmd
     def desktop_clients(self, mess, args):
         """A command that list currently available desktop clients"""
         output = "The current list of mycroft desktop clients, " \
-                 "KDE Plasma Desktop: https://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
-                 "Other Desktop Environments: https://github.com/AIIX/Mycroft-AI-QtApplication/releases"
+                 "KDE: http://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
+                 "Others: https://github.com/AIIX/Mycroft-AI-QtApplication"
         return output
 
     @botcmd
