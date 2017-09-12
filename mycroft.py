@@ -68,14 +68,14 @@ class Mycroft(BotPlugin):
         return output
 
     @botcmd
-    def install_qtapp(self, mess, args):
+    def install_qtapplication(self, mess, args):
         """A command that gives info about installing the QTApplication"""
         output = "Appimage for the standalone Qtapplication is available at" \
                  "https://github.com/AIIX/Mycroft-Ai-QtApplication/releases"
         return output
 
     @botcmd
-    def install_qtapp(self, mess, args):
+    def troubleshoot_plasmoid(self, mess, args):
         """A command that gives troublehooting info for the KDE Plasmoid"""
         output = "Steps to troubleshoot your plasmoid install" \
                  "* Check if mycroft-core is installed correctly" \

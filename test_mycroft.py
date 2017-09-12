@@ -54,8 +54,8 @@ class TestMycroftBot(object):
                  "here, https://github.com/MycroftAI/installers"
         assert output in testbot.pop_message()
 
-    def test_install_qtapp(self, testbot):
-        testbot.push_message('!install_qt_application')
+    def test_install_qtapplication(self, testbot):
+        testbot.push_message('!install_qtapplication')
         output = "Appimage for the standalone Qtapplication is available at" \
                  "https://github.com/AIIX/Mycroft-Ai-QtApplication/releases"
         assert output in testbot.pop_message()
