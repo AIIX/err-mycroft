@@ -96,7 +96,7 @@ class TestMycroftBot(object):
         assert output in testbot.pop_message()
 
     def test_desktop_clients(self, testbot):
-        testbot.push_message('!available_desktop_clients')
+        testbot.push_message('!desktop_clients')
         output = "The current list of mycroft desktop clients, " \
                  "KDE: http://cgit.kde.org/plasma-mycroft.git/tree/Readme.md" \
                  "Others: https://github.com/AIIX/Mycroft-AI-QtApplication"
